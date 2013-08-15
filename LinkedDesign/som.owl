@@ -1,0 +1,2146 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY swrl "http://www.w3.org/2003/11/swrl#" >
+    <!ENTITY swrlb "http://www.w3.org/2003/11/swrlb#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY p1 "http://www.owl-ontologies.com/assert.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY protege "http://protege.stanford.edu/plugins/owl/protege#" >
+    <!ENTITY xsp "http://www.owl-ontologies.com/2005/08/07/xsp.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.owl-ontologies.com/Ontology1202459344.owl#"
+     xml:base="http://www.owl-ontologies.com/Ontology1202459344.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+     xmlns:p1="http://www.owl-ontologies.com/assert.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl">
+        <owl:imports rdf:resource="http://www.opengroup.org/udefinfo/rdf/udef"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="&xsd;date"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#time -->
+
+    <rdfs:Datatype rdf:about="&xsd;time"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Activity2Life_Cycle_Phase -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Activity2Life_Cycle_Phase">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Activity"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Life_Cycle_Phase"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#As_Designed_Product2Condition -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#As_Designed_Product2Condition">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#As_Designed_Product"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Condition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#As_Designed_Product2Field_Data_Source -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#As_Designed_Product2Field_Data_Source">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#As_Designed_Product"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data_Source"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data_Source2As_Designed_Product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#As_Designed_Product2Physical_Product_Group -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#As_Designed_Product2Physical_Product_Group">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#As_Designed_Product"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product_Group"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#As_Designed_Product2Property -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#As_Designed_Product2Property">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#As_Designed_Product"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#As_Designed_Product2Valid_Field_Data_Type -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#As_Designed_Product2Valid_Field_Data_Type">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#As_Designed_Product"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type2As_Designed_Product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Causes -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Causes">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Activity"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Condition2As_Designed_Product -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Condition2As_Designed_Product">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#As_Designed_Product"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#As_Designed_Product2Condition"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Condition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Condition2Event -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Condition2Event">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Condition"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Event"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Event2Condition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Condition2Physical_Product -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Condition2Physical_Product">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Condition"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product2Condition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Condition2Property -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Condition2Property">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Condition"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Document2Document_Resource -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Document2Document_Resource">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Document"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Document_Resource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Document2Field_Data -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Document2Field_Data">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Document"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Document2File -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Document2File">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Document"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#File"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Document_Resource2Document -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Document_Resource2Document">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Document"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Document2Document_Resource"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Document_Resource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Equiptment_Resource2Property -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Equiptment_Resource2Property">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Equiptment_Resource"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Property"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Property2Equiptment_Resource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Event2Condition -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Event2Condition">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Condition"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Event2Field_Data -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Event2Field_Data">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Event"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data2Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Event2Life_Cycle_Phase -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Event2Life_Cycle_Phase">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Event"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Life_Cycle_Phase"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Event2Resource -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Event2Resource">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Event"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Resource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data2Document -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data2Document">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Document"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Document2Field_Data"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data2Event -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data2Event">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Event"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data2Field_Data_Source -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data2Field_Data_Source">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data_Source"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data2Life_Cycle_Phase -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data2Life_Cycle_Phase">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Life_Cycle_Phase"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Life_Cycle_Phase2Field_Data"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data2Physical_Product -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data2Physical_Product">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data2Physical_Product_Group -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data2Physical_Product_Group">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product_Group"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data2Valid_Field_Data_Type -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data2Valid_Field_Data_Type">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data_Source2As_Designed_Product -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data_Source2As_Designed_Product">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#As_Designed_Product"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data_Source"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data_Source2Field_Data -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data_Source2Field_Data">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data2Field_Data_Source"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data_Source"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data_Source2ID_Information -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data_Source2ID_Information">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data_Source"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#ID_Information"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#ID_Information2Field_Data_Source"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data_Source2Physical_Product -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data_Source2Physical_Product">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data_Source"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product2Field_Data_Source"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data_Source2Valid_Field_Data_Type -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data_Source2Valid_Field_Data_Type">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data_Source"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#File2Document -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#File2Document">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Document"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Document2File"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#File"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#ID_Information2Field_Data_Source -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#ID_Information2Field_Data_Source">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data_Source"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#ID_Information"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#ID_Information2Information_Provider -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#ID_Information2Information_Provider">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#ID_Information"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Information_Provider"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Information_Provider2ID_Information"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#ID_Information2Physical_Product -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#ID_Information2Physical_Product">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#ID_Information"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#ID_Information2URI -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#ID_Information2URI">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#ID_Information"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#URI"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Information_Provider2ID_Information -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Information_Provider2ID_Information">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#ID_Information"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Information_Provider"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Involves -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Involves">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Activity"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Resource"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Resource2Activity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Life_Cycle_Phase2Activity -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Life_Cycle_Phase2Activity">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Activity"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Activity2Life_Cycle_Phase"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Life_Cycle_Phase"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Life_Cycle_Phase2Event -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Life_Cycle_Phase2Event">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Event"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Event2Life_Cycle_Phase"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Life_Cycle_Phase"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Life_Cycle_Phase2Field_Data -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Life_Cycle_Phase2Field_Data">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Life_Cycle_Phase"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Life_Cycle_Phase2Physical_Product -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Life_Cycle_Phase2Physical_Product">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Life_Cycle_Phase"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Life_Cycle_Phase2Resource -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Life_Cycle_Phase2Resource">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Life_Cycle_Phase"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Resource"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Resource2Life_Cycle_Phase"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Material_Resource2Property -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Material_Resource2Property">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Material_Resource"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Property"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Property2Material_Resource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Personnel_Resource2Property -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Personnel_Resource2Property">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Personnel_Resource"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product2Condition -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product2Condition">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Condition"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product2Field_Data -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product2Field_Data">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data2Physical_Product"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product2Field_Data_Source -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product2Field_Data_Source">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data_Source"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product2ID_Information -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product2ID_Information">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#ID_Information"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#ID_Information2Physical_Product"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product2Life_Cycle_Phase -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product2Life_Cycle_Phase">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Life_Cycle_Phase"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Life_Cycle_Phase2Physical_Product"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product2Physical_Product_Group -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product2Physical_Product_Group">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product_Group"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product2Property -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product2Property">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Property"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Property2Physical_Product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product2Resource -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product2Resource">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Resource"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Resource2Physical_Product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product2Valid_Field_Data_Type -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product2Valid_Field_Data_Type">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type2Physical_Product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product_Group2As_Designed_Product -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product_Group2As_Designed_Product">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#As_Designed_Product"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#As_Designed_Product2Physical_Product_Group"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product_Group"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product_Group2Field_Data -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product_Group2Field_Data">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data2Physical_Product_Group"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product_Group"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product_Group2Physical_Product -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product_Group2Physical_Product">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product2Physical_Product_Group"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product_Group"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product_Group2Valid_Field_Data_Type -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product_Group2Valid_Field_Data_Type">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product_Group"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type2Physical_Product_Group"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Property2As_Designed_Product -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Property2As_Designed_Product">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#As_Designed_Product"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#As_Designed_Product2Property"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Property2Condition -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Property2Condition">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Condition"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Condition2Property"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Property2Equiptment_Resource -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Property2Equiptment_Resource">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Equiptment_Resource"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Property2Material_Resource -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Property2Material_Resource">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Material_Resource"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Property2Personnel_Resource -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Property2Personnel_Resource">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Personnel_Resource"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Personnel_Resource2Property"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Property2Physical_Product -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Property2Physical_Product">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Resource2Activity -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Resource2Activity">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Activity"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Resource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Resource2Event -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Resource2Event">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Event"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Event2Resource"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Resource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Resource2Life_Cycle_Phase -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Resource2Life_Cycle_Phase">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Life_Cycle_Phase"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Resource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Resource2Physical_Product -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Resource2Physical_Product">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Resource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Triggers -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Triggers">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Activity"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Causes"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#URI2ID_Information -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#URI2ID_Information">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#ID_Information"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#ID_Information2URI"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#URI"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type2As_Designed_Product -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type2As_Designed_Product">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#As_Designed_Product"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type2Field_Data -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type2Field_Data">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data2Valid_Field_Data_Type"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type2Field_Data_Source -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type2Field_Data_Source">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data_Source"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data_Source2Valid_Field_Data_Type"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type2Physical_Product -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type2Physical_Product">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type2Physical_Product_Group -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type2Physical_Product_Group">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product_Group"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#hasDefined -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#hasDefined">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#As_Designed_Product"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#isDesigned"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#hasParent -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#hasParent">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#isDesigned -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#isDesigned">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#As_Designed_Product"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#isParentOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#isParentOf">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#hasParent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Accuracy -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Accuracy">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_DataDatatypeProperties"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Action_When_Met -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Action_When_Met">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#ConditionDatatypeProperties"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Action_When_Not_Met -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Action_When_Not_Met">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#ConditionDatatypeProperties"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#ActivityDatatypeProperties -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#ActivityDatatypeProperties">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Activity"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#ActivityDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#ActivityDescription">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#ActivityDatatypeProperties"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#ActivityDuration -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#ActivityDuration">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#ActivityDatatypeProperties"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#ActivityFinishingDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#ActivityFinishingDate">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#ActivityDuration"/>
+        <rdfs:range rdf:resource="&xsd;date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#ActivityFinishingTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#ActivityFinishingTime">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#ActivityDuration"/>
+        <rdfs:range rdf:resource="&xsd;time"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#ActivityID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#ActivityID">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#ActivityDatatypeProperties"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#ActivityStartingDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#ActivityStartingDate">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#ActivityDuration"/>
+        <rdfs:range rdf:resource="&xsd;date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#ActivityStartingTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#ActivityStartingTime">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#ActivityDuration"/>
+        <rdfs:range rdf:resource="&xsd;time"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Alt_Pres -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Alt_Pres">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#ID_InformationDatatypeProperties"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#As_Designed_ProductDatatypeProperties -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#As_Designed_ProductDatatypeProperties">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#As_Designed_Product"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Birth_Date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Birth_Date">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_ProductDatatypeProperties"/>
+        <rdfs:range rdf:resource="&xsd;date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#BoM -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#BoM">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#As_Designed_ProductDatatypeProperties"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#CAD_Model -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#CAD_Model">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#As_Designed_ProductDatatypeProperties"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Category -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Category">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#PropertiesDatatypeProperties"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#ConditionDatatypeProperties -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#ConditionDatatypeProperties">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Condition"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Condition_State -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Condition_State">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#As_Designed_ProductDatatypeProperties"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#As_Designed_Product"/>
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Condition"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Costs_Information -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Costs_Information">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#As_Designed_ProductDatatypeProperties"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Date">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#WHEN"/>
+        <rdfs:range rdf:resource="&xsd;date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Definition_Domain -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Definition_Domain">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type_DatatypeProperties"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Document_DatatypeProperties -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Document_DatatypeProperties">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Document"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Document_ID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Document_ID">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Document_DatatypeProperties"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Document_Type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Document_Type">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Document_DatatypeProperties"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#E_Mail -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#E_Mail">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Personnel_ResourceDatatypeProperties"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#End_Date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#End_Date">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_ProductDatatypeProperties"/>
+        <rdfs:range rdf:resource="&xsd;date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Equiptment_ResourceDatatypeProperties -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Equiptment_ResourceDatatypeProperties">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Equiptment_Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Equiptment_Type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Equiptment_Type">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Equiptment_ResourceDatatypeProperties"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#EventDatatypeProperties -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#EventDatatypeProperties">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Event"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#EventFlag -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#EventFlag">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#EventDatatypeProperties"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">Cancelled</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">Happended</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">Planned</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;string">Predicted</rdf:first>
+                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Field_DataDatatypeProperties -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_DataDatatypeProperties">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data_ID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data_ID">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_DataDatatypeProperties"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data_Source_DatatypeProperties -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data_Source_DatatypeProperties">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data_Source"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data_Type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data_Type">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_DataDatatypeProperties"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#File_DatatypeProperties -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#File_DatatypeProperties">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#File"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#File_ID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#File_ID">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#File_DatatypeProperties"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#File_Type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#File_Type">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#File_DatatypeProperties"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#From_Date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#From_Date">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Part_OfDatatypeProperties"/>
+        <rdfs:range rdf:resource="&xsd;date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Group_ID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Group_ID">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_DataDatatypeProperties"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#ID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#ID">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#ID_InformationDatatypeProperties"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#ID_InformationDatatypeProperties -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#ID_InformationDatatypeProperties">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#ID_Information"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#ID_Type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#ID_Type">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#ID_InformationDatatypeProperties"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Leaving_Product_State -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Leaving_Product_State">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#EventDatatypeProperties"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Life_Cycle_PhaseDatatypeProperties -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Life_Cycle_PhaseDatatypeProperties">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Life_Cycle_Phase"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Material_Lot -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Material_Lot">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Material_ResourceDatatypeProperty"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Material_ResourceDatatypeProperty -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Material_ResourceDatatypeProperty">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Material_Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Material_Type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Material_Type">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Material_ResourceDatatypeProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Materials_Information -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Materials_Information">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#As_Designed_ProductDatatypeProperties"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Measuring_Unit -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Measuring_Unit">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type_DatatypeProperties"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Object_Lot_ID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Object_Lot_ID">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_ProductDatatypeProperties"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Part_OfDatatypeProperties -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Part_OfDatatypeProperties"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Personnel_ResourceDatatypeProperties -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Personnel_ResourceDatatypeProperties">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Personnel_Resource"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Personnel_Type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Personnel_Type">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Personnel_ResourceDatatypeProperties"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_ProductDatatypeProperties -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_ProductDatatypeProperties">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Product_Complexity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Product_Complexity">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_ProductDatatypeProperties"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">Complex</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">Simple</rdf:first>
+                                <rdf:rest rdf:resource="&rdf;nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Product_State -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Product_State">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#As_Designed_Product"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#As_Designed_ProductDatatypeProperties"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">Broken</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">Off</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">On</rdf:first>
+                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Product_State_Its_Own -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Product_State_Its_Own">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Life_Cycle_PhaseDatatypeProperties"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string">Healthy 10%</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">Healthy 100%</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">Healthy 15%</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;string">Healthy 20%</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                        <rdf:first rdf:datatype="&xsd;string">Healthy 5%</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                <rdf:first rdf:datatype="&xsd;string">Healthy 90%</rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                                        <rdf:first rdf:datatype="&xsd;string">Healthy 95%</rdf:first>
+                                                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Product_Type_ID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Product_Type_ID">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#As_Designed_ProductDatatypeProperties"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#PropertiesDatatypeProperties -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#PropertiesDatatypeProperties">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Property"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Properties_Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Properties_Name">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#PropertiesDatatypeProperties"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Property_State -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Property_State">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#As_Designed_ProductDatatypeProperties"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#As_Designed_Product"/>
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Property"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Property_Value -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Property_Value">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#PropertiesDatatypeProperties"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#QA_test_and_Specification -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#QA_test_and_Specification">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Material_ResourceDatatypeProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Equiptment_Resource"/>
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Material_Resource"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Qualification_test_and_Specification -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Qualification_test_and_Specification">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Personnel_ResourceDatatypeProperties"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Reference_Group_ID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Reference_Group_ID">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_DataDatatypeProperties"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Residual_Life -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Residual_Life">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Life_Cycle_PhaseDatatypeProperties"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Source_ID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Source_ID">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data_Source_DatatypeProperties"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Telephone -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Telephone">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Personnel_ResourceDatatypeProperties"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Tests_n_Specifications -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Tests_n_Specifications">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#As_Designed_ProductDatatypeProperties"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Time -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Time">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#WHEN"/>
+        <rdfs:range rdf:resource="&xsd;time"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Time_Stamp -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Time_Stamp">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#EventDatatypeProperties"/>
+        <rdfs:range rdf:resource="&xsd;time"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#To_Date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#To_Date">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Part_OfDatatypeProperties"/>
+        <rdfs:range rdf:resource="&xsd;date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Triggering_Condition -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Triggering_Condition">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#EventDatatypeProperties"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Type">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#ID_InformationDatatypeProperties"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Type_Flag -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Type_Flag">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data_Source_DatatypeProperties"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#URIDatatypeProperty -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#URIDatatypeProperty">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#URI"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type_Category -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type_Category">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type_DatatypeProperties"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type_DatatypeProperties -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type_DatatypeProperties">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type_ID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type_ID">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type_DatatypeProperties"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Value -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Value">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_DataDatatypeProperties"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Value_Type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Value_Type">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type_DatatypeProperties"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Variants_Information -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Variants_Information">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#As_Designed_ProductDatatypeProperties"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#WHAT -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#WHAT">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_DataDatatypeProperties"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#WHEN -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#WHEN">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_DataDatatypeProperties"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#WHERE -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#WHERE">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_DataDatatypeProperties"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#WHO -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#WHO">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_DataDatatypeProperties"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Access_Rights -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Access_Rights">
+        <rdfs:subClassOf rdf:resource="http://www.opengroup.org/udefinfo/rdf/udef#UDEF-11"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#SOM"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Activity"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#As_Designed_Product"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Condition"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Document"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Event"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data_Source"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#File"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#ID_Information"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Life_Cycle_Phase"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product_Group"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Property"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Resource"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Activity -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Activity">
+        <rdfs:subClassOf rdf:resource="http://www.opengroup.org/udefinfo/rdf/udef#UDEF-8"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#SOM"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#As_Designed_Product"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Condition"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Document"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Event"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data_Source"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#File"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#ID_Information"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Life_Cycle_Phase"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product_Group"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Property"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Resource"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#As_Designed_Product -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#As_Designed_Product">
+        <rdfs:subClassOf rdf:resource="http://www.opengroup.org/udefinfo/rdf/udef#UDEF-ad.9"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Condition"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Document"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Event"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data_Source"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#File"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#ID_Information"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Life_Cycle_Phase"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product_Group"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Property"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Resource"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Condition -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Condition">
+        <rdfs:subClassOf rdf:resource="http://www.opengroup.org/udefinfo/rdf/udef#UDEF-11"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#SOM"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Document"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Event"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data_Source"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#File"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#ID_Information"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Life_Cycle_Phase"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product_Group"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Property"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Resource"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Document -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Document">
+        <rdfs:subClassOf rdf:resource="http://www.opengroup.org/udefinfo/rdf/udef#UDEF-2"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#SOM"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Event"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data_Source"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#File"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#ID_Information"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Life_Cycle_Phase"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product_Group"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Property"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Resource"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Document_Resource -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Document_Resource">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Resource"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Equiptment_Resource"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Material_Resource"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Personnel_Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Equiptment_Resource -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Equiptment_Resource">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Resource"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Material_Resource"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Personnel_Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Event -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Event">
+        <rdfs:subClassOf rdf:resource="http://www.opengroup.org/udefinfo/rdf/udef#UDEF-16"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#SOM"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data_Source"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#File"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#ID_Information"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Life_Cycle_Phase"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product_Group"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Property"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Resource"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data">
+        <rdfs:subClassOf rdf:resource="http://www.opengroup.org/udefinfo/rdf/udef#UDEF-0"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#SOM"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data2Field_Data_Source"/>
+                <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data_Source"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data2Field_Data_Source"/>
+                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data_Source"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data_Source"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#File"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#ID_Information"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Life_Cycle_Phase"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product_Group"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Property"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Resource"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data_Source -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Field_Data_Source">
+        <rdfs:subClassOf rdf:resource="http://www.opengroup.org/udefinfo/rdf/udef#UDEF-9"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#SOM"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#File"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#ID_Information"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Life_Cycle_Phase"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product_Group"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Property"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Resource"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#File -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#File">
+        <rdfs:subClassOf rdf:resource="http://www.opengroup.org/udefinfo/rdf/udef#UDEF-2"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#SOM"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#ID_Information"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Life_Cycle_Phase"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product_Group"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Property"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Resource"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#ID_Information -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#ID_Information">
+        <rdfs:subClassOf rdf:resource="http://www.opengroup.org/udefinfo/rdf/udef#UDEF-0"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#SOM"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Life_Cycle_Phase"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product_Group"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Property"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Resource"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Information_Provider -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Information_Provider">
+        <rdfs:subClassOf rdf:resource="http://www.opengroup.org/udefinfo/rdf/udef#UDEF-3"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#SOM"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#URI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Life_Cycle_Phase -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Life_Cycle_Phase">
+        <rdfs:subClassOf rdf:resource="http://www.opengroup.org/udefinfo/rdf/udef#UDEF-f.11"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#SOM"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product_Group"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Property"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Resource"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Material_Resource -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Material_Resource">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Resource"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Personnel_Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Personnel_Resource -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Personnel_Resource">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product">
+        <rdfs:subClassOf rdf:resource="http://www.opengroup.org/udefinfo/rdf/udef#UDEF-o.9"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#SOM"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product2Physical_Product_Group"/>
+                <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product_Group"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product2Physical_Product_Group"/>
+                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product_Group"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product_Group"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Property"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Resource"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product_Group -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Physical_Product_Group">
+        <rdfs:subClassOf rdf:resource="http://www.opengroup.org/udefinfo/rdf/udef#UDEF-s.9"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#SOM"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Property"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Resource"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Product_BOL_Supply -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Product_BOL_Supply">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Life_Cycle_Phase"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Product_EOL"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Product_MOL"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Product_EOL -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Product_EOL">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Life_Cycle_Phase"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Product_MOL"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Product_MOL -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Product_MOL">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Life_Cycle_Phase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Property -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Property">
+        <rdfs:subClassOf rdf:resource="http://www.opengroup.org/udefinfo/rdf/udef#UDEF-11"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#SOM"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Resource"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Resource -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Resource">
+        <rdfs:subClassOf rdf:resource="http://www.opengroup.org/udefinfo/rdf/udef#UDEF-1"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#SOM"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#SOM -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#SOM"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#URI -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#URI">
+        <rdfs:subClassOf rdf:resource="http://www.opengroup.org/udefinfo/rdf/udef#UDEF-0"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#SOM"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1202459344.owl#Valid_Field_Data_Type">
+        <rdfs:subClassOf rdf:resource="http://www.opengroup.org/udefinfo/rdf/udef#UDEF-0"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/Ontology1202459344.owl#SOM"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
