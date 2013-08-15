@@ -89,5 +89,8 @@ end
 
 # static variable used by the class HTTPwrapper
 $engine = Engine.new
-Rack::Handler::WEBrick.run(HTTPwrapper.new, :Port => 8081)
+Rack::Handler::WEBrick.run(
+  HTTPwrapper.new,
+  :Port => 8081
+)
 
