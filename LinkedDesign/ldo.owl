@@ -330,6 +330,24 @@
     
 
 
+    <!-- http://www.linkeddesign.eu/ld01.owl#amountInStock -->
+
+    <owl:DatatypeProperty rdf:about="http://www.linkeddesign.eu/ld01.owl#amountInStock">
+        <rdfs:domain rdf:resource="http://www.linkeddesign.eu/ld01.owl#Resource"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.linkeddesign.eu/ld01.owl#costValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.linkeddesign.eu/ld01.owl#costValue">
+        <rdfs:domain rdf:resource="http://www.linkeddesign.eu/ld01.owl#Product"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.linkeddesign.eu/ld01.owl#hasCostValue -->
 
     <owl:DatatypeProperty rdf:about="http://www.linkeddesign.eu/ld01.owl#hasCostValue">
@@ -371,11 +389,124 @@
     
 
 
+    <!-- http://www.linkeddesign.eu/ld01.owl#location -->
+
+    <owl:DatatypeProperty rdf:about="http://www.linkeddesign.eu/ld01.owl#location">
+        <rdfs:domain rdf:resource="http://www.linkeddesign.eu/ld01.owl#Resource"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.linkeddesign.eu/ld01.owl#moduleID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.linkeddesign.eu/ld01.owl#moduleID">
+        <rdfs:domain rdf:resource="http://www.linkeddesign.eu/ld01.owl#Module"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.linkeddesign.eu/ld01.owl#moduleName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.linkeddesign.eu/ld01.owl#moduleName">
+        <rdfs:domain rdf:resource="http://www.linkeddesign.eu/ld01.owl#Module"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.linkeddesign.eu/ld01.owl#occuredAt -->
+
+    <owl:DatatypeProperty rdf:about="http://www.linkeddesign.eu/ld01.owl#occuredAt">
+        <rdfs:domain rdf:resource="http://www.linkeddesign.eu/ld01.owl#Event"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.linkeddesign.eu/ld01.owl#partID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.linkeddesign.eu/ld01.owl#partID">
+        <rdfs:domain rdf:resource="http://www.linkeddesign.eu/ld01.owl#Part"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.linkeddesign.eu/ld01.owl#partName -->
 
     <owl:DatatypeProperty rdf:about="http://www.linkeddesign.eu/ld01.owl#partName">
         <rdfs:domain rdf:resource="http://www.linkeddesign.eu/ld01.owl#Part"/>
         <rdfs:domain rdf:resource="http://www.opengroup.org/udefinfo/rdf/udef#_25.10"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.linkeddesign.eu/ld01.owl#registeredID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.linkeddesign.eu/ld01.owl#registeredID">
+        <rdfs:domain rdf:resource="http://www.linkeddesign.eu/ld01.owl#Product"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.linkeddesign.eu/ld01.owl#registeredName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.linkeddesign.eu/ld01.owl#registeredName">
+        <rdfs:domain rdf:resource="http://www.linkeddesign.eu/ld01.owl#Product"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.linkeddesign.eu/ld01.owl#resourceID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.linkeddesign.eu/ld01.owl#resourceID">
+        <rdfs:domain rdf:resource="http://www.linkeddesign.eu/ld01.owl#Resource"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.linkeddesign.eu/ld01.owl#resourceName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.linkeddesign.eu/ld01.owl#resourceName">
+        <rdfs:domain rdf:resource="http://www.linkeddesign.eu/ld01.owl#Resource"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.linkeddesign.eu/ld01.owl#scheduledEnd -->
+
+    <owl:DatatypeProperty rdf:about="http://www.linkeddesign.eu/ld01.owl#scheduledEnd">
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.linkeddesign.eu/ld01.owl#Process"/>
+                    <rdf:Description rdf:about="http://www.linkeddesign.eu/ld01.owl#Task"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.linkeddesign.eu/ld01.owl#scheduledStart -->
+
+    <owl:DatatypeProperty rdf:about="http://www.linkeddesign.eu/ld01.owl#scheduledStart">
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.linkeddesign.eu/ld01.owl#Process"/>
+                    <rdf:Description rdf:about="http://www.linkeddesign.eu/ld01.owl#Task"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -421,16 +552,16 @@
         <rdfs:subClassOf rdf:resource="http://www.linkeddesign.eu/ld01.owl#ServiceCost"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;float"/>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Cost to ensure a 24h service for the M/C</rdfs:comment>
@@ -466,16 +597,16 @@
         <rdfs:subClassOf rdf:resource="http://www.linkeddesign.eu/ld01.owl#PurchaseCost"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;float"/>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.linkeddesign.eu/ld01.owl#AuxiliarySystemsCost"/>
@@ -494,16 +625,16 @@
         <rdfs:subClassOf rdf:resource="http://www.linkeddesign.eu/ld01.owl#WarrantyCost"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;float"/>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Cost of an additional warranty (warranty extension, ...)</rdfs:comment>
@@ -534,16 +665,16 @@
         <rdfs:subClassOf rdf:resource="http://www.linkeddesign.eu/ld01.owl#ChemicalsCost"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;float"/>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.linkeddesign.eu/ld01.owl#CompressedAirPerYearCost"/>
@@ -600,16 +731,16 @@
         <rdfs:subClassOf rdf:resource="http://www.linkeddesign.eu/ld01.owl#ToolingCost"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;float"/>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.linkeddesign.eu/ld01.owl#SettingGaugeForToolingCost"/>
@@ -713,16 +844,16 @@
         <rdfs:subClassOf rdf:resource="http://www.linkeddesign.eu/ld01.owl#ConsumablesCost"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;float"/>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.linkeddesign.eu/ld01.owl#DetergentPerYearCost"/>
@@ -742,16 +873,16 @@
         <rdfs:subClassOf rdf:resource="http://www.linkeddesign.eu/ld01.owl#UnscheduledMaintenanceCost"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;float"/>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -773,16 +904,16 @@
         <rdfs:subClassOf rdf:resource="http://www.linkeddesign.eu/ld01.owl#UnscheduledMaintenanceCost"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;float"/>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.linkeddesign.eu/ld01.owl#UnplannedDowntimePerYearCost"/>
@@ -868,16 +999,16 @@
         <rdfs:subClassOf rdf:resource="http://www.linkeddesign.eu/ld01.owl#EngineeringCost"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;float"/>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.linkeddesign.eu/ld01.owl#DocumentationCost"/>
@@ -911,16 +1042,16 @@
         <rdfs:subClassOf rdf:resource="http://www.linkeddesign.eu/ld01.owl#EngineeringCost"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;float"/>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.linkeddesign.eu/ld01.owl#RunoffCost"/>
@@ -975,16 +1106,16 @@
         <rdfs:subClassOf rdf:resource="http://www.linkeddesign.eu/ld01.owl#ElectricityCost"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;float"/>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.linkeddesign.eu/ld01.owl#ElectricityInIdlePerYearCost"/>
@@ -1065,16 +1196,16 @@
         <rdfs:subClassOf rdf:resource="http://www.linkeddesign.eu/ld01.owl#OperationCost"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;float"/>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.linkeddesign.eu/ld01.owl#InsuranceCost"/>
@@ -1094,6 +1225,12 @@
         <rdfs:subClassOf rdf:resource="http://www.linkeddesign.eu/ld01.owl#ScheduledMaintenanceCost"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#dependsOn"/>
+                <owl:someValuesFrom rdf:resource="http://www.linkeddesign.eu/ld01.owl#MaintenanceLabourCostPerHour"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="&xsd;string"/>
@@ -1104,12 +1241,6 @@
                 <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="&xsd;float"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#dependsOn"/>
-                <owl:someValuesFrom rdf:resource="http://www.linkeddesign.eu/ld01.owl#MaintenanceLabourCostPerHour"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.linkeddesign.eu/ld01.owl#GeneralOverhaulMaterialPerYearCost"/>
@@ -1127,16 +1258,16 @@
         <rdfs:subClassOf rdf:resource="http://www.linkeddesign.eu/ld01.owl#ScheduledMaintenanceCost"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;float"/>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.linkeddesign.eu/ld01.owl#M/C-operatorLabourPerYearCost"/>
@@ -1212,16 +1343,16 @@
         <rdfs:subClassOf rdf:resource="http://www.linkeddesign.eu/ld01.owl#AuxiliarySystemsCost"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;float"/>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.linkeddesign.eu/ld01.owl#M/CPLCCost"/>
@@ -1330,16 +1461,16 @@
         <rdfs:subClassOf rdf:resource="http://www.linkeddesign.eu/ld01.owl#InitialStockCost"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;float"/>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.linkeddesign.eu/ld01.owl#InitialWearPartsCost"/>
@@ -1366,16 +1497,16 @@
         <rdfs:subClassOf rdf:resource="http://www.linkeddesign.eu/ld01.owl#InitialStockCost"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;float"/>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Cost of the initial wear parts for the stock</rdfs:comment>
@@ -1389,16 +1520,16 @@
         <rdfs:subClassOf rdf:resource="http://www.linkeddesign.eu/ld01.owl#AcquisitionCost"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;float"/>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.linkeddesign.eu/ld01.owl#PackagingCost"/>
@@ -1418,16 +1549,16 @@
         <rdfs:subClassOf rdf:resource="http://www.linkeddesign.eu/ld01.owl#OperationCost"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;float"/>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.linkeddesign.eu/ld01.owl#LabourCost"/>
@@ -1489,6 +1620,13 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasTotalAvailableOperatingHoursPerMonthValue"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasProductionWeeksPerMonthValue"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="&xsd;float"/>
@@ -1497,13 +1635,6 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasProductionHoursPerWeekValue"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;float"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasTotalAvailableOperatingHoursPerMonthValue"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="&xsd;float"/>
             </owl:Restriction>
@@ -1524,16 +1655,16 @@
         <rdfs:subClassOf rdf:resource="http://www.linkeddesign.eu/ld01.owl#OperationCost"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;float"/>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.linkeddesign.eu/ld01.owl#OngoingTrainingCost"/>
@@ -1608,16 +1739,16 @@
         <rdfs:subClassOf rdf:resource="http://www.linkeddesign.eu/ld01.owl#LabourCost"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;float"/>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.linkeddesign.eu/ld01.owl#MaintenanceLabourCostPerHour"/>
@@ -1633,16 +1764,16 @@
         <rdfs:subClassOf rdf:resource="http://www.linkeddesign.eu/ld01.owl#AuxiliarySystemsCost"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;float"/>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Cost to add a M/C PLC</rdfs:comment>
@@ -1656,16 +1787,16 @@
         <rdfs:subClassOf rdf:resource="http://www.linkeddesign.eu/ld01.owl#PurchaseCost"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;float"/>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.linkeddesign.eu/ld01.owl#ToolingCost"/>
@@ -1725,16 +1856,16 @@
         <rdfs:subClassOf rdf:resource="http://www.linkeddesign.eu/ld01.owl#ChemicalsCost"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;float"/>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.linkeddesign.eu/ld01.owl#NaturalGasPerYearCost"/>
@@ -1789,16 +1920,16 @@
         <rdfs:subClassOf rdf:resource="http://www.linkeddesign.eu/ld01.owl#ChemicalsCost"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;float"/>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.linkeddesign.eu/ld01.owl#NitrogenPerYearCost"/>
@@ -1948,16 +2079,16 @@
         <rdfs:subClassOf rdf:resource="http://www.linkeddesign.eu/ld01.owl#AcquisitionCost"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;float"/>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.linkeddesign.eu/ld01.owl#PurchaseCost"/>
@@ -1992,16 +2123,16 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;float"/>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.linkeddesign.eu/ld01.owl#PreventiveMaintenancePerYearCost"/>
@@ -2016,13 +2147,6 @@
         <rdfs:subClassOf rdf:resource="http://www.linkeddesign.eu/ld01.owl#ScheduledMaintenanceCost"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;float"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#reduces"/>
                 <owl:someValuesFrom rdf:resource="http://www.linkeddesign.eu/ld01.owl#UnscheduledMaintenanceCost"/>
             </owl:Restriction>
@@ -2032,6 +2156,13 @@
                 <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Cost required to perform the preventive maintenance (preventing faults from occuring)</rdfs:comment>
@@ -2211,16 +2342,16 @@
         <rdfs:subClassOf rdf:resource="http://www.linkeddesign.eu/ld01.owl#ToolingCost"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;float"/>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.linkeddesign.eu/ld01.owl#ToolHolderCost"/>
@@ -2236,16 +2367,16 @@
         <rdfs:subClassOf rdf:resource="http://www.linkeddesign.eu/ld01.owl#SupportCost"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;float"/>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Cost required for the software support (updates, bug fixes, ...)</rdfs:comment>
@@ -2259,16 +2390,16 @@
         <rdfs:subClassOf rdf:resource="http://www.linkeddesign.eu/ld01.owl#InventoryManagementCost"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;float"/>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.linkeddesign.eu/ld01.owl#StandbyPartsStockPerYearCost"/>
@@ -2319,16 +2450,16 @@
         <rdfs:subClassOf rdf:resource="http://www.linkeddesign.eu/ld01.owl#MaintenanceCost"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;float"/>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.linkeddesign.eu/ld01.owl#UnscheduledMaintenanceCost"/>
@@ -2360,16 +2491,16 @@
         <rdfs:subClassOf rdf:resource="http://www.linkeddesign.eu/ld01.owl#OperationCost"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;float"/>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.linkeddesign.eu/ld01.owl#UtilitiesCost"/>
@@ -2392,16 +2523,16 @@
         <rdfs:subClassOf rdf:resource="http://www.linkeddesign.eu/ld01.owl#LabourCost"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;float"/>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Cost required to change the tools over a one year period</rdfs:comment>
@@ -2415,16 +2546,16 @@
         <rdfs:subClassOf rdf:resource="http://www.linkeddesign.eu/ld01.owl#ToolingCost"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;float"/>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.linkeddesign.eu/ld01.owl#ToolsCost"/>
@@ -2439,16 +2570,16 @@
         <rdfs:subClassOf rdf:resource="http://www.linkeddesign.eu/ld01.owl#ConsumablesCost"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;float"/>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Cost of all the different tool set used over a one year period</rdfs:comment>
@@ -2494,16 +2625,16 @@
         <rdfs:subClassOf rdf:resource="http://www.linkeddesign.eu/ld01.owl#AcquisitionCost"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;float"/>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.linkeddesign.eu/ld01.owl#TransportationCost"/>
@@ -2518,6 +2649,12 @@
         <rdfs:subClassOf rdf:resource="http://www.linkeddesign.eu/ld01.owl#AcquisitionCost"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#RequiresPackaging"/>
+                <owl:someValuesFrom rdf:resource="http://www.linkeddesign.eu/ld01.owl#PackagingCost"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="&xsd;float"/>
@@ -2528,12 +2665,6 @@
                 <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="&xsd;string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#RequiresPackaging"/>
-                <owl:someValuesFrom rdf:resource="http://www.linkeddesign.eu/ld01.owl#PackagingCost"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Cost to transport the material from where it has been built to the factory where it?ll be used</rdfs:comment>
@@ -2570,16 +2701,16 @@
         <rdfs:subClassOf rdf:resource="http://www.linkeddesign.eu/ld01.owl#EngineeringCost"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;float"/>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Costs to perform the tryout phase</rdfs:comment>
@@ -2650,16 +2781,16 @@
         <rdfs:subClassOf rdf:resource="http://www.linkeddesign.eu/ld01.owl#WasteHandlingCost"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;float"/>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.linkeddesign.eu/ld01.owl#WasteHandlingPerYearCost"/>
@@ -2683,16 +2814,16 @@
         <rdfs:subClassOf rdf:resource="http://www.linkeddesign.eu/ld01.owl#WasteHandlingCost"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;float"/>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Cost to handle the waste produced by the machine over a one year period</rdfs:comment>
@@ -2706,16 +2837,16 @@
         <rdfs:subClassOf rdf:resource="http://www.linkeddesign.eu/ld01.owl#InventoryManagementCost"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;float"/>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasUnit"/>
+                <owl:onProperty rdf:resource="http://www.linkeddesign.eu/ld01.owl#hasCostValue"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
+                <owl:onDataRange rdf:resource="&xsd;float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Cost to bring back the wear parts stock to its standard value</rdfs:comment>
