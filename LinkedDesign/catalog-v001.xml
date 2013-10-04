@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://www.linkeddesign.eu/ld01.owl" uri="file:////licpnas1/LICP_Projects_DK/LinkedDesign/LD_WPs%20and%20Deliverables/WP3/Deliverable/ldo-3.2-3.1.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1376586101692" name="http://www.linkeddesign.eu/ld01.owl" uri="ldo.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1376586101692" name="http://www.opengroup.org/udefinfo/rdf/udef" uri="udef.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1376586101692" name="http://www.owl-ontologies.com/Ontology1202459344.owl" uri="som.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1380024343601" name="http://www.linkeddesign.eu/ld01.owl" uri="ldo.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1380024343601" name="http://www.opengroup.org/udefinfo/rdf/udef" uri="udef.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1380024343601" name="http://www.owl-ontologies.com/Ontology1202459344.owl" uri="som.owl"/>
     </group>
 </catalog>

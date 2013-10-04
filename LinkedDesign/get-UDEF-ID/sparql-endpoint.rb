@@ -1,5 +1,5 @@
 require 'rubygems'
-['sparql', 'linkeddata', 'thin', 'rack/sparql', 'rack/server', 'uri'].each {|x| require x}
+['sparql', 'linkeddata', 'thin', 'rack/sparql', 'rack/server', 'rack/contrib/jsonp', 'uri'].each {|x| require x}
 
 # Demonstrates how to get a UDEF ID
 # It setups a local metadata registry on port 8081, executes a SPARQL query that returns a UDEF ID. The client side rests on another file.
@@ -24,6 +24,14 @@ class Engine
       html = SPARQL.serialize_results(solutions, {:content_type => "text/html", :format => :html})
       # from each URL, it keeps only the concept/property/value name
       result = html.gsub!(/<td>.*#/, "<td>").gsub!(/#{Regexp.escape("&gt;<\/td>")}/, "</td>")
+    end    
+    return result
+  end
+  def returnJSON(query)
+    result = ""
+    solutions = SPARQL.execute(query, @repository)
+    if solutions.count != 0
+      result = SPARQL.serialize_results(solutions, {:content_type => "application/json", :format => :json})
     end    
     return result
   end
@@ -77,13 +85,24 @@ class HTTPwrapper
 
     if request.params.length == 0
       response.write "Requires the parameter 'query'"
-    elsif request.params['query']
+      response.write "</body></html>"
+      response.finish 
+      return response
+    elsif request.params.include?('query') and request.params.include?('callback')  # JSONP enables Same Origin Policy http://www.ibm.com/developerworks/library/wa-aj-jsonp1/
+      response = [pad(request.params.delete('callback'), $engine.returnJSON(request.params['query']))]
+      headers['Content-Length'] = response.length.to_s
+      return [200, headers, response] # TODO: Debug
+    elsif request.params.include?('query')
       response.write $engine.sparql request.params['query']
-    elsif request.params['search']
+      response.write "</body></html>"
+      response.finish 
+      return response
+    elsif request.params.include?('search')
       response.write $engine.search request.params['search']
-    end
-    response.write "</body></html>"
-    response.finish  
+      response.write "</body></html>"
+      response.finish
+      return response 
+    end    
   end
 end
 
