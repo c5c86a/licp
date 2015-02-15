@@ -1,20 +1,16 @@
 require 'rubygems'
 ['sparql', 'linkeddata', 'thin', 'rack/sparql', 'rack/server', 'rack/contrib/jsonp', 'uri'].each {|x| require x}
 
-# Demonstrates how to get a UDEF ID
-# It setups a local metadata registry on port 8081, executes a SPARQL query that returns a UDEF ID. The client side rests on another file.
-
-# Examples:
-# http://localhost/?query=SELECT%20?s%20?p%20?o%20WHERE%20%7B%20?s%20?p%20%3Chttp://www.e-save.eu/eSAVEOntology.owl%23Fuel_Consumption%3E%20%7D
-# http://localhost/?search=KPI
+# Minimal SPARQL endpoint. Partially tested at client.rb.
+#
 # Limitations:
 # 1. A GET request cannot be very long
-# The search is absolute. It has no similarity measure.
+# 2. The search has no similarity measure, it does only exact matching.
 
 class Engine
   def initialize
-    p = "/Users/maris/Documents/GitHub/licp/LinkedDesign/"
-    owlpaths = [File.path(p+"udef.owl"), File.path(p+"ldo.owl")]
+    cwd = Dir.pwd + "/"
+    owlpaths = [File.path(cwd+"udef.owl"), File.path(cwd+"ldo.owl")]
     @repository = RDF::Repository.load(owlpaths)
   end
   def sparql(query)
@@ -35,7 +31,7 @@ class Engine
     end    
     return result
   end
-  def search(term)
+  def search(term) # TODO: add test that covers this method
     results = ""
     inSubjects = false
     inPredicates = false
@@ -81,23 +77,31 @@ class HTTPwrapper
     response.write "<html>"
     response.write '<head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Results</title></head><body>'
+<title>Demo: LDO-UDEF mapping</title></head><body>'
+    links="This demo gets the UDEF (Universal Data Element Framework) IDs of the entity 'partName' of the LinkedDesign ontology. It demonstrates that LDO can be used across UDEF applications for metadata discovery.<br/><br/>"
+    links=links+"The ontologies were edited manually with Protege:<br/>"
+    links=links+"<a href=\"http://www.essepuntato.it/lode/optional-parameters/https://raw.githubusercontent.com/nickmeet/licp/master/LinkedDesign/ldo.owl\">Ontology</a> for the <a href=\"http://www.linkeddesign.eu\">LinkedDesign</a> project.<br/>"
+    links=links+"<a href=\"http://www.essepuntato.it/lode/optional-parameters/https://raw.githubusercontent.com/nickmeet/licp/master/LinkedDesign/udef.owl\">Ontology</a> after merging all RDF schemas of the <a href=\"http://www.opengroup.org/udef/faq.htm\">Universal Data Element Framework</a>"
+    links=links+"<br/><br/>"
 
     if request.params.length == 0
-      response.write "Requires the parameter 'query'"
+      response.write "Requires the parameter 'query' or the parameter 'search'"
+      response.write links
       response.write "</body></html>"
       response.finish 
       return response
-    elsif request.params.include?('query') and request.params.include?('callback')  # JSONP enables Same Origin Policy http://www.ibm.com/developerworks/library/wa-aj-jsonp1/
-      response = [pad(request.params.delete('callback'), $engine.returnJSON(request.params['query']))]
-      headers['Content-Length'] = response.length.to_s
-      return [200, headers, response] # TODO: Debug
     elsif request.params.include?('query')
+      response.write links
+      response.write "Query:<br/>"+request.params['query']
+      response.write "<br/><br/>Result:<br/>"
       response.write $engine.sparql request.params['query']
       response.write "</body></html>"
       response.finish 
       return response
     elsif request.params.include?('search')
+      response.write links
+      response.write "Search:<br/>"+request.params['search']
+      response.write "<br/><br/>Result:<br/>"
       response.write $engine.search request.params['search']
       response.write "</body></html>"
       response.finish

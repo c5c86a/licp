@@ -1,8 +1,6 @@
 Metadata management for data integration and associated standardization activities for the project http://www.linkeddesign.eu/
 
-The owl files have been edited with Protege.
-
-Future work:
-  * Saving files in Turtle format to simplify diff.
-  * documentation generator: https://github.com/ldodds/dowl
-  * static visualization: http://rhizomik.net/html/redefer/rdf2svg-form/
+Tested on lubuntu 14.04x64, ruby 2.1:
+bundle install
+ruby sparql-endpoint.rb # on one terminal
+ruby client.rb # on another terminal
